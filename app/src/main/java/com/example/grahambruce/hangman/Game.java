@@ -88,13 +88,6 @@ public class Game {
         }
     }
 
-//    private char getGuess() {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Enter a guess");
-//
-//        return sc.nextLine().charAt(0);
-//    }
-
     public void guessLoop() {
         while (player1.getLives() > 0 && hiddenWord.contains('*')) {
             hit = false;
