@@ -12,15 +12,19 @@ public class UserInput {
 
     public static String getUserWord(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Hey, what about a word, nerd!");
         return sc.nextLine().toLowerCase();
     }
 
     public static char getUserChar(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a guess");
-        return sc.nextLine().charAt(0);
-
+        System.out.println("Please pick a letter:");
+        String input = sc.nextLine().toLowerCase();
+        while(!input.matches("[a-z]+")){
+            System.out.println("Please enter a valid character");
+            input = sc.nextLine().toUpperCase();
+        }
+        char choice = input.charAt(0);
+        return choice;
     }
 
     public static boolean getUserBoolean(){
